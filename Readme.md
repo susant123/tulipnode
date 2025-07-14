@@ -10,17 +10,16 @@ technical analysis indicator functions, such as:
 simple moving average, Bollinger Bands, MACD, Parabolic SAR, Stochastic
 Oscillator, and many more.
 
-
 ## Installation
 
 Installation should just be:
 
-``` js
+```js
 npm install tulind
 ```
 
-It should work on Windows, Os X, and Linux. Node version 10, 11, 12, 13, 14 (LTS),
-15 and 16 are tested and supported on each platform.
+It should work on Windows, Os X, and Linux. Node version 16, 18, 20, and 22 (LTS)
+are tested and supported on each platform.
 
 Note that pre-compiled binaries are available for Windows. For other platforms
 you will need a C++ build environment installed. On Linux based distributions
@@ -35,56 +34,57 @@ npm install tulind --build-from-source
 If you run into problems, let me know. I want this to be easy for everyone to
 use.
 
-
 ## Usage
 
 Tulip Node is very easy to use.
 
-``` js
-var tulind = require('tulind');
+```js
+var tulind = require("tulind");
 console.log("Tulip Indicators version is:");
 console.log(tulind.version);
 ```
 
 In these examples, we assume you already have price data loaded such as:
-``` js
+
+```js
 //Examples assume you have some price data like this:
 //Data order is from oldest to newset (index 0 is the oldest)
-var open  = [4,5,5,5,4,4,4,6,6,6];
-var high  = [9,7,8,7,8,8,7,7,8,7];
-var low   = [1,2,3,3,2,1,2,2,2,3];
-var close = [4,5,6,6,6,5,5,5,6,4];
-var volume = [123,232,212,232,111,232,212,321,232,321];
+var open = [4, 5, 5, 5, 4, 4, 4, 6, 6, 6];
+var high = [9, 7, 8, 7, 8, 8, 7, 7, 8, 7];
+var low = [1, 2, 3, 3, 2, 1, 2, 2, 2, 3];
+var close = [4, 5, 6, 6, 6, 5, 5, 5, 6, 4];
+var volume = [123, 232, 212, 232, 111, 232, 212, 321, 232, 321];
 ```
 
 Calculating a simple moving average is as easy as:
 
-``` js
+```js
 //Do a simple moving average on close prices with period of 3.
-tulind.indicators.sma.indicator([close], [3], function(err, results) {
+tulind.indicators.sma.indicator([close], [3], function (err, results) {
   console.log("Result of sma is:");
   console.log(results[0]);
 });
 ```
 
-
-
 Example of calculating the Stochastic Oscillator:
 
-``` js
+```js
 //Functions that take multiple inputs, options, or outputs use arrays.
 //Call Stochastic Oscillator, taking 3 inputs, 3 options, and 2 outputs.
-tulind.indicators.stoch.indicator([high, low, close], [5, 3, 3], function(err, results) {
-  console.log("Result of stochastic oscillator is:");
-  console.log(results[0]);
-  console.log(results[1]);
-});
+tulind.indicators.stoch.indicator(
+  [high, low, close],
+  [5, 3, 3],
+  function (err, results) {
+    console.log("Result of stochastic oscillator is:");
+    console.log(results[0]);
+    console.log(results[1]);
+  }
+);
 ```
-
 
 It's also easy to discover argument types at run-time:
 
-``` js
+```js
 //Discover argument types at run-time:
 console.log(tulind.indicators.stoch);
 
@@ -102,21 +102,21 @@ console.log(tulind.indicators.stoch);
   start: [Function] }
 ```
 
-
 Many (most) indicators return an output array length smaller than the input length.
 You can get the difference like this:
 
-``` js
-console.log("Given these options, the output arrays will be this much shorter than the input arrays:");
-console.log(tulind.indicators.stoch.start([5,3,3]));
+```js
+console.log(
+  "Given these options, the output arrays will be this much shorter than the input arrays:"
+);
+console.log(tulind.indicators.stoch.start([5, 3, 3]));
 ```
 
-
 Hopefully it's obvious, but you can see all the available indicators by doing:
-``` js
+
+```js
 console.log(tulind.indicators);
 ```
 
 You can also see a full list of the available indicators on the [Tulip
 Indicators website here](https://tulipindicators.org/list).
-
