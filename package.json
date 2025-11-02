@@ -4,7 +4,7 @@
     "Susant (maintained fork)"
   ],
   "name": "tulind-maintained",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Maintained fork of Tulip Indicators - Over 100 Technical Analysis Functions with modern Node.js support",
   "main": "index.js",
   "gypfile": true,
@@ -40,10 +40,10 @@
   ],
   "license": "LGPL-3.0",
   "dependencies": {
-    "bindings": "^1.5.0",
-    "nan": "^2.17.0",
     "@mapbox/node-pre-gyp": "^1.0.11",
-    "minctest": "0.0.x"
+    "bindings": "^1.5.0",
+    "minctest": "0.0.x",
+    "nan": "^2.17.0"
   },
   "devDependencies": {
     "aws-sdk": "2.x"
