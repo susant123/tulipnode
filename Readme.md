@@ -1,8 +1,26 @@
 [![Build Status](https://travis-ci.com/TulipCharts/tulipnode.svg?branch=master)](https://travis-ci.com/TulipCharts/tulipnode)
 [![Build Status](https://ci.appveyor.com/api/projects/status/ps9l8w7fxi81v2q5/branch/master?svg=true)](https://ci.appveyor.com/project/codeplea/tulipnode)
-[![npm](https://img.shields.io/npm/dw/tulind.svg)](https://www.npmjs.com/package/tulind)
+[![npm](https://img.shields.io/npm/dw/tulind-maintained.svg)](https://www.npmjs.com/package/tulind-maintained)
 
-# Tulip Node
+# Tulind Maintained
+
+> **📢 Important Notice:** This is a maintained fork of the original [tulipnode](https://github.com/TulipCharts/tulipnode) 
+> project by Lewis Van Winkle. The original project appears to be unmaintained with pending PRs not being merged. 
+> This fork provides compatibility with modern Node.js versions and ongoing maintenance.
+
+## Why This Fork?
+
+- ✅ **Modern Node.js Support**: Works with Node.js 16, 18, 20, and 22 (LTS versions)
+- ✅ **Updated Dependencies**: All dependencies updated to latest versions
+- ✅ **Active Maintenance**: Bugs are fixed and PRs are reviewed
+- ✅ **Community Driven**: Welcoming contributions from the community
+- ✅ **Same Great API**: Drop-in replacement for the original `tulind` package
+
+**All credit for the original implementation and design goes to Lewis Van Winkle and the Tulip Indicators project.**
+
+---
+
+## About Tulip Indicators
 
 Tulip Node is the official node.js wrapper for [Tulip
 Indicators](https://tulipindicators.org). It provides 100+
@@ -15,7 +33,22 @@ Oscillator, and many more.
 Installation should just be:
 
 ```js
-npm install tulind
+npm install tulind-maintained
+```
+
+**Or if migrating from the original package:**
+```js
+npm uninstall tulind
+npm install tulind-maintained
+```
+
+Then update your imports:
+```js
+// Old
+// const tulind = require("tulind");
+
+// New
+const tulind = require("tulind-maintained");
 ```
 
 It should work on Windows, Os X, and Linux. Node version 16, 18, 20, and 22 (LTS)
@@ -28,7 +61,7 @@ this can be achieved by installing `build-essential` package.
 You can force building from source with:
 
 ```js
-npm install tulind --build-from-source
+npm install tulind-maintained --build-from-source
 ```
 
 If you run into problems, let me know. I want this to be easy for everyone to
@@ -39,7 +72,7 @@ use.
 Tulip Node is very easy to use.
 
 ```js
-var tulind = require("tulind");
+var tulind = require("tulind-maintained");
 console.log("Tulip Indicators version is:");
 console.log(tulind.version);
 ```
@@ -120,3 +153,34 @@ console.log(tulind.indicators);
 
 You can also see a full list of the available indicators on the [Tulip
 Indicators website here](https://tulipindicators.org/list).
+
+## Contributing
+
+Contributions are welcome! This is a community-maintained fork, and we're happy to review PRs.
+
+Please:
+- Open an issue first for major changes
+- Follow the existing code style
+- Add tests for new features
+- Update documentation as needed
+
+## Original Project
+
+This is a maintained fork of [tulipnode](https://github.com/TulipCharts/tulipnode) by Lewis Van Winkle.
+
+The original project provided an excellent foundation for technical analysis in Node.js. This fork exists to ensure the project remains compatible with modern Node.js versions and receives ongoing maintenance.
+
+## License
+
+This project maintains the original **LGPL-3.0** license. See the [LICENSE](LICENSE) file for details.
+
+Original work Copyright (C) Lewis Van Winkle  
+Modifications Copyright (C) 2025 Susant and contributors
+
+## Links
+
+- **NPM Package**: [tulind-maintained](https://www.npmjs.com/package/tulind-maintained)
+- **Original Project**: [TulipCharts/tulipnode](https://github.com/TulipCharts/tulipnode)
+- **Tulip Indicators**: [tulipindicators.org](https://tulipindicators.org)
+- **Report Issues**: [GitHub Issues](https://github.com/susant123/tulipnode/issues)
+

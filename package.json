@@ -1,16 +1,27 @@
 {
   "author": "Lewis Van Winkle",
-  "name": "tulind",
-  "version": "0.8.20",
-  "description": "Tulip Indicators Wrapper Providing Over 100 Technical Analysis Functions",
+  "maintainers": [
+    "Susant (maintained fork)"
+  ],
+  "name": "tulind-maintained",
+  "version": "1.0.0",
+  "description": "Maintained fork of Tulip Indicators - Over 100 Technical Analysis Functions with modern Node.js support",
   "main": "index.js",
   "gypfile": true,
   "repository": {
     "type": "git",
-    "url": "git://github.com/TulipCharts/tulipnode"
+    "url": "git://github.com/susant123/tulipnode"
+  },
+  "homepage": "https://github.com/susant123/tulipnode#readme",
+  "bugs": {
+    "url": "https://github.com/susant123/tulipnode/issues"
   },
   "keywords": [
     "tulip",
+    "tulind",
+    "tulipnode",
+    "maintained",
+    "fork",
     "charts",
     "charting",
     "indicators",
@@ -20,7 +31,12 @@
     "analysis",
     "finance",
     "trading",
-    "markets"
+    "markets",
+    "stocks",
+    "crypto",
+    "forex",
+    "technical-analysis",
+    "trading-indicators"
   ],
   "license": "LGPL-3.0",
   "dependencies": {

@@ -1,0 +1,27 @@
+# Development files
+.git/
+.gitignore
+.travis.yml
+appveyor.yml
+test.js
+example.js
+
+# Documentation (keep README, LICENSE, NOTICE, CHANGELOG)
+*.md
+!README.md
+!CHANGELOG.md
+
+# Build artifacts that will be rebuilt
+build/
+node_modules/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db

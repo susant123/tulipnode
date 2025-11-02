@@ -1,0 +1,24 @@
+tulind-maintained
+Copyright (C) 2025 Susant and contributors
+
+This is a maintained fork of the original tulipnode project.
+
+Original Project: tulipnode
+Original Author: Lewis Van Winkle
+Original Repository: https://github.com/TulipCharts/tulipnode
+Original License: LGPL-3.0
+
+This maintained fork preserves all original functionality and maintains
+the same LGPL-3.0 license. The purpose of this fork is to provide ongoing
+maintenance, bug fixes, and compatibility with modern Node.js versions.
+
+All credit for the original implementation and design goes to Lewis Van Winkle
+and the contributors to the original tulipnode project.
+
+Modifications in this fork include:
+- Updated dependencies for modern Node.js compatibility
+- Updated documentation and repository information
+- Ongoing maintenance and bug fixes
+
+This software is distributed under the GNU Lesser General Public License v3.0.
+See the LICENSE file for the complete license text.
